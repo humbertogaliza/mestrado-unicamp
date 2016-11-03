@@ -1,0 +1,72 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[Brito \emph{et al.} 2015]{brito2015anatomia}
+\abntrefinfo{Brito \emph{et al.}}{BRITO \emph{et al.}}{2015}
+{BRITO, S. H.~B.; SANTOS, M. A.~S.; FONTES, R. dos R.; PEREZ, D. A.~L.;
+  ROTHENBERG, C.~E. Anatomia do ecossistema de pontos de troca de tr{\'a}fego
+  publicos na internet do brasil.
+\emph{XXXIII Simp{\'o}sio Brasileiro de Redes de Computadores (SBRC)}, 2015.}
+
+\bibitem[Chatzis \emph{et al.} 2013]{chatzis2013importance}
+\abntrefinfo{Chatzis \emph{et al.}}{CHATZIS \emph{et al.}}{2013}
+{CHATZIS, N.; SMARAGDAKIS, G.; FELDMANN, A. On the importance of internet
+  exchange points for today's internet ecosystem.
+\emph{arXiv preprint arXiv:1307.5264}, 2013.}
+
+\bibitem[Chung \emph{et al.}]{chungatlanticwave}
+\abntrefinfo{Chung \emph{et al.}}{CHUNG \emph{et al.}}{}
+{CHUNG, J.; COX, J.; IBARRA, J.; BEZERRA, J.; MORGAN, H.; CLARK, R.; OWEN, H.
+  Atlanticwave-sdx: An international sdx to support science data applications.}
+
+\bibitem[EURO-IX 2012]{euroix2012}
+\abntrefinfo{EURO-IX}{EURO-IX}{2012}
+{EURO-IX. \emph{European Internet Exchange Association 2012 Report on European
+  IXPs}.
+[S.l.], 2012. Dispon{\'\i}vel em:
+  \url{https://www.euro-ix.net/documents/1117-Euro-IX-IXP-Report-2012-pdf}.}
+
+\bibitem[Haddadi e Bonaventure 2013]{haddadi2013}
+\abntrefinfo{Haddadi e Bonaventure}{HADDADI; BONAVENTURE}{2013}
+{HADDADI, H.; BONAVENTURE, O. Recent advances in networking. chapter 1:
+  Internet topology research redux.
+\emph{ACM SIGCOMM eBook}, 2013.}
+
+\bibitem[Lu e Zhao 2005]{lu2005networking}
+\abntrefinfo{Lu e Zhao}{LU; ZHAO}{2005}
+{LU, X.; ZHAO, W. \emph{Networking and Mobile Computing: 3rd International
+  Conference, ICCNMC 2005, Zhangjiajie, China, August 2-4, 2005, Proceedings}.
+  [S.l.]: Springer, 2005. v.~3619.}
+
+\bibitem[Narten \emph{et al.} 2013]{rfc6820}
+\abntrefinfo{Narten \emph{et al.}}{NARTEN \emph{et al.}}{2013}
+{NARTEN, T.; KARIR, M.; FOO, I. \emph{{Address Resolution Problems in Large
+  Data Center Networks}}. IETF, 2013. RFC 6820 (Informational).
+ (Request for Comments, 6820).
+Dispon{\'\i}vel em: \url{http://www.ietf.org/rfc/rfc6820.txt}.}
+
+\bibitem[NIC.BR 2016]{pttmetro}
+\abntrefinfo{NIC.BR}{NIC.BR}{2016}
+{NIC.BR. \emph{Projeto PTTMetro}. 2016. Disponível online.
+Dispon{\'\i}vel em: \url{http://www.ptt.br}.}
+
+\bibitem[Rekhter \emph{et al.} 2006]{rfc4271}
+\abntrefinfo{Rekhter \emph{et al.}}{REKHTER \emph{et al.}}{2006}
+{REKHTER, Y.; LI, T.; HARES, S. \emph{{A Border Gateway Protocol 4 (BGP-4)}}.
+  IETF, 2006. RFC 4271 (Draft Standard).
+ (Request for Comments, 4271). Updated by RFCs 6286, 6608, 6793, 7606, 7607,
+  7705.
+Dispon{\'\i}vel em: \url{http://www.ietf.org/rfc/rfc4271.txt}.}
+
+\bibitem[Stringer \emph{et al.} 2013]{stringer2013cardigan}
+\abntrefinfo{Stringer \emph{et al.}}{STRINGER \emph{et al.}}{2013}
+{STRINGER, J.~P.; FU, Q.; LORIER, C.; NELSON, R.; ROTHENBERG, C.~E. Cardigan:
+  Deploying a distributed routing fabric. In:  ACM. \emph{Proceedings of the
+  second ACM SIGCOMM workshop on Hot topics in software defined networking}.
+  [S.l.], 2013. p. 169--170.}
+
+\end{thebibliography}

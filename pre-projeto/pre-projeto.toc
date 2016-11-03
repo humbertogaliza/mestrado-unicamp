@@ -1,0 +1,37 @@
+\changetocdepth {4}
+\select@language {english}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Research Topic}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem Statement}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Hypothesis/Research subtopics}{1}{section.1.3}
+\contentsline {section}{\numberline {1.4}Justification}{1}{section.1.4}
+\contentsline {section}{\numberline {1.5}Objectives}{2}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}General Objective}{2}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Specific Objectives}{2}{subsection.1.5.2}
+\contentsline {chapter}{\chapternumberline {2}Literature Review}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}IXP importance to the Internet in Brazil}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Problems Affecting the Current Model}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Issues Affecting IXP Control Plane}{6}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Broadcast Storming in the Switching Fabric}{6}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Prohibited and Unknown Ethernet Frames in the Switching Fabric}{6}{subsubsection.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.1.3}Building and Maintaining a Loop-Free Topology}{7}{subsubsection.2.2.1.3}
+\contentsline {subsubsection}{\numberline {2.2.1.4}Attacks Targeted to Control Plane}{7}{subsubsection.2.2.1.4}
+\contentsline {subsubsection}{\numberline {2.2.1.5}Traffic Engineering Support}{8}{subsubsection.2.2.1.5}
+\contentsline {subsubsection}{\numberline {2.2.1.6}Networking Programmability Support}{8}{subsubsection.2.2.1.6}
+\contentsline {subsection}{\numberline {2.2.2}Issues Affecting IXP Data Plane}{9}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Hot-potato routing}{9}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Routing Leaks}{9}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Prefix Hijacking}{9}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}BGP NEXT\_HOP Hijacking}{9}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.5}Source Member Attacks and Targeted Member Attacks}{10}{subsubsection.2.2.2.5}
+\contentsline {subsection}{\numberline {2.2.3}Operational Issues Affecting IXP Today}{10}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Software-Defined Networks}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Software-Defined Exchange Points}{10}{section.2.4}
+\contentsline {chapter}{\chapternumberline {3}Methodology}{13}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Cronograma}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Etapas do desenvolvimento}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}Cronograma do desenvolvimento}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Cronograma financeiro}{16}{section.4.3}
+\contentsline {chapter}{\chapternumberline {5}Proposta de Estrutura Capitular}{17}{chapter.5}
+\vspace {\cftbeforepartskip }
+\contentsline {chapter}{Bibliography}{19}{section*.7}
