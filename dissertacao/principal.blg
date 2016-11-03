@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: principal.aux
+A level-1 auxiliary file: cap1.aux
+A level-1 auxiliary file: cap5.aux
+The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: abntex2-options.bib
+Database file #2: tese.bib
+Warning--I didn't find a database entry for "Cover2006"
+Warning--I didn't find a database entry for "Haykin1998"
+Warning--I didn't find a database entry for "Haykin2008"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.5           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+You've used 4 entries,
+            6714 wiz_defined-function locations,
+            1209 strings with 9464 characters,
+and the built_in function-call counts, 1755 in all, are:
+= -- 227
+> -- 3
+< -- 3
++ -- 49
+- -- 3
+* -- 63
+:= -- 239
+add.period$ -- 0
+call.type$ -- 6
+change.case$ -- 12
+chr.to.int$ -- 13
+cite$ -- 0
+duplicate$ -- 20
+empty$ -- 207
+format.name$ -- 0
+if$ -- 468
+int.to.chr$ -- 3
+int.to.str$ -- 3
+missing$ -- 42
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 41
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 254
+stack$ -- 1
+substring$ -- 64
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 2
+width$ -- 0
+write$ -- 8
+(There were 3 warnings)
