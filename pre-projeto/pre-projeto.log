@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.30)  31 OCT 2016 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.30)  16 MAY 2017 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1200,10 +1200,10 @@ Package lastpage Info: Please have a look at the pageslts package at
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package epstopdf Info: Source file: <./eps/unicamp.eps>
-(epstopdf)                    date: 2016-03-16 15:00:27
+(epstopdf)                    date: 2016-05-03 19:22:42
 (epstopdf)                    size: 58456 bytes
 (epstopdf)             Output file: <./eps/unicamp-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-16 15:00:27
+(epstopdf)                    date: 2016-05-03 19:49:14
 (epstopdf)                    size: 4078 bytes
 (epstopdf)             Command: <repstopdf --outfile=./eps/unicamp-eps-converte
 d-to.pdf ./eps/unicamp.eps>
