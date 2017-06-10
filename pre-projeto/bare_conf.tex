@@ -37,13 +37,18 @@
 
 
 \begin{document}
-\title{A survey on problems in generalized Internet eXchange Points architectures}
+\title{A survey on problems and limitations of current Internet Exchange Points architectures}
 
-\author{\IEEEauthorblockN{Humberto Silva Galiza de Freitas}
-\IEEEauthorblockA{Academic Network at Sao Paulo (ANSP)\\
-Americas Lightpaths Express and Protect (AmLight-ExP)\\
-Sao Paulo, Brazil \\
-Email: galiza@amlight.net}}
+\author{
+	\IEEEauthorblockN{Humberto Galiza\IEEEauthorrefmark{1}, Luiz Fernadez Lopez\IEEEauthorrefmark{2}, Leobino Sampaio\IEEEauthorrefmark{3},Jeronimo Bezerra\IEEEauthorrefmark{4}, Julio Ibarra\IEEEauthorrefmark{4}}
+	\IEEEauthorblockA{\IEEEauthorrefmark{1}Academic Network at Sao Paulo (ANSP)\\
+							  \IEEEauthorrefmark{1}\{galiza,lopez\}@ansp.br}
+	\IEEEauthorblockA{\IEEEauthorrefmark{3}Universidade Federal da Bahia (UFBA)\\
+							\IEEEauthorrefmark{3}leobino@ufba.br}
+	\IEEEauthorblockA{\IEEEauthorrefmark{4}Florida International University (FIU)\\
+							\IEEEauthorrefmark{4}\{jbezerra,julio\}@fiu.edu}
+}
+
 
 % make the title area
 \maketitle
@@ -71,9 +76,9 @@ Though the critical importance the Internet eXchange Points (IXP) represent to t
 
 Regardless the IXP is commercial or for academic traffic exchange, these issues can compromise all or part of its operation, damaging its image and mission, due to the insecurity and instability created in the traffic routing environment. This situation might generate mistrust to the current members, as well as distancing possible new associates.
 
-Software-Defined Networking is a new networking approach that promises, among other things, turn the networks more smart by decoupling the control plane from the data plane, as well as adding programmability support to the network. OpenFlow is the most famous protocol in this novel, and was created as a joint effort of many different networking organizations, to provide all the SDN abstractions.
+Software-Defined Networks (SDN) is a new networking approach that promises, among other things, turn the networks more smart by decoupling the control plane from the data plane, as well as adding programmability support to the network. OpenFlow~\cite{mckeown2008openflow} is the most famous protocol in this novel, and was created as a joint effort of many different networking organizations, to provide all the SDN abstractions.
 
-Recent developments in Software-Defined Networks (SDN), which promises network management simplification as well as the addition of more capabilities and flexibility, have brought an interesting use case for IXPs called Software-Defined Internet Exchange (SDX). ~\cite{gupta2015sdx}~\cite{gupta2016industrial}. 
+Recent developments in SDN, which promises network management simplification as well as the addition of more capabilities and flexibility, have brought an interesting use case for IXPs, so-called Software-Defined Internet Exchange (SDX). ~\cite{gupta2015sdx}. 
 
 However, while the current model presents limitations due to it is own nature, still the SDX novel introduces many problems, which needs to be addressed to guarantee IXP's correctness, scalability, resiliency, management and evolution.
 
@@ -84,37 +89,33 @@ This paper is organized as follows: Section ~\ref{ixp_intro} presents the curren
 \section{Current IXP architecture and terminology}
 \label{ixp_intro}
 
-In the literature, the Internet Exchange Points are considered the natural successors of the old Network Access Points (NAP), place where the Autonomous Systems used to meet to exchange traffic and keep themselves reachable, what have turned to the current Internet. In the past few years a lot of work have been devoted to have a good comprehension of such complex ecossystem~\cite{haddadi2013}.
+Internet Exchange Points are considered the natural successors of the old Network Access Points (NAP), a place where the Autonomous Systems (AS) used to meet to exchange traffic and keep themselves reachable. In the past few years, a lot of research work ~\cite{ager2012anatomy}~\cite{haddadi2013}~\cite{chatzis2013benefits} has been devoted to have a good comprehension of such complex ecossystem due its potential role to shape the future of Internet~\cite{kloti2016comparative}.
 
-The IXP importance within the Internet ecosystem is clearly presented in the work of~\cite{chatzis2013importance}. The authors sustain that although the academia does not like to see too many 'hot' topics involving IXP, there is a strong relationship between issues affecting network cloud services and data center services, mobility and even the trending SDN paradigm, with all the systematic operated by IXPs.
+Although research on IXP's can no longer be considered a hot topic nowadays, the work in~\cite{chatzis2013importance} highlighted the strong relationship between issues affecting network cloud and data center services, mobility and even the trending SDN paradigm, with all the systematic operated by IXPs. Also, in Brazil, the recent work of~\cite{brito2015anatomia} brought an innovative contribution by offering the first detailed analysis of the IXPs importance to the Internet development and evolution in the country. 
 
-From a technical perspective, an IXP is basically an Ethernet based traffic matrix, as known as a single broadcast domain with the aim to facilitate the traffic exchange between Autonomous Systems (or simply participants)~\cite{euroix2012}.
+Aside of their importance, from a technical perspective, an IXP is essentially an enormous flat Ethernet domain, whose aim is to facilitate the traffic exchange between ASes, or simply IXP members or participants~\cite{euroix2012}. A number of IXPs in operation nowadays utilize a network design based on IEEE Std. 802.1q (Virtual Local Area Network - VLAN). Depending on the traffic exchange model adopted in each IXP, one or more VLAN identifier (VLAN ID) can be assigned to the connectors router's.
 
-% In Brazil, the roll out of PTTMetro project in 200x have contributed to develop Brazil's Internet as well as to improve it's quality. On the other hand, many problems affect the current model, not only in Brazil but over the world, since most IXPs use pretty much the same Ethernet based model today.
+However, due to limitations imposed by the technology, including the number of VLANs available for usage (it is a 12-bit only field), big IXPs have migrated their switching fabrics to Multiprotocol Label Switching (MPLS)~\cite{rfc3031} and its Virtual Private Lan Service (VPLS)~\cite{rfc4761,rfc4762}. MPLS and VPLS are not new technologies but had proven to be scalable enough to support IXP operations, especially when they grow in the number of Points of Presence (PoPs) and or participants. When compared to the simple usage of VLANs, the combination between MPLS and VPLS allow the IXP operator to have more control over the switching fabric either on data and control planes, delivering more scalability and resiliency. 
 
-%These are trend topics today and have a good relevance to the academia. Understanding how SDN/OpenFlow could bring benefits to a real world use case will bring new challenges, but the most important achievement of this research will be delivering a true scalable model, with support to more refined Traffic Engineering capabilities and improved security.
-
-%\subsection{IXP architecture and terminology}
-%No Brasil, o primeiro PTT foi criado em 1992(?), através de iniciativa da Rede Nacional de Ensino e Pesquisa (RNP) (?), e teve como objetivo interconectar a infraestrutura de Internet no Brasil. Em meados de 2003 o Núcleo e Coordenação do Ponto BR (NIC.BR) em parceria com a RNP, lançou o projeto PTTMetro\footnote{Mais recentemente o projeto teve seu nome alterado para IX.BR - http://www.ix.br}~\cite{pttmetro}, com o objetivo de melhorar a interconexão regional no Brasil. O projeto atualmente tem PTTs implantados em XX cidades, conectando um total de YYY ASs participantes, tendo um tráfego agregado de ZZZZGbps.
-
-%Ainda como evidência da sua importância, o recente trabalho de ~\cite{brito2015anatomia} trouxe uma contribuição inovadora para o assunto, oferecendo a primeira análise detalhada desse microcosmo dentro da Internet brasileira. Os autores caracterizaram um conjunto de informações relevantes compreendendo desde os tipos de membros conectados aos PTTs, até os respectivos grafos de conectividade em nível Sistema Autônomo.
+Notwithstanding, regardless the Layer-2 technology employed, all IXP connectors set up BGP sessions to exchange routes on top of this switching fabric.
 
 \subsection{Next Generation IXPs: Software-Defined Internet Exchange (SDX)}
-Introduzir SDN e SDX
+SDN promises network management simplification as well as the addition of more capabilities and flexibility. In this sense, an interesting use case for SDN is its application to IXPs, turning them into the so-called Software-Defined Internet Exchange points (SDX). 
 
-To the best of this author knows, there are no consesus on Software-Defined Exchange Points definition in the literature, but on~\cite{chungatlanticwave} works a SDX classification is presented based in three main approachs:
-\begin{enumerate}
-\item SDX de camada 3
-\item SDX de camada 2
-\item SDX para interconexão entre ilhas SDN
-\end{enumerate}
+While there is a lack of consensus on SDX definition in the literature, recent research and developments shows that this topic still has a good relevance to the academia. In the work of~\cite{chungatlanticwave} is suggested a classification of SDX based on the functionality delivered to the fabric: (1) Layer-3 SDX; (2) Layer-2 SDX; and (3) SDX for SDN-Island interconnections.
 
-Os requisitos fundamentais dentro da abordagem SDX de camada 3 são a necessidade do utilização do protolo BGP~\cite{rfc4271} para o envio e recebimento dos prefixos IP dos participantes, tal como é feito no modelo atual de PTT, além da inclusão de um controlador SDN ao \textit{switching fabric} com a responsabilidade de instalar os fluxos entre os participantes. Nesse escopo, destaca-se a contribuição feita por~\cite{stringer2013cardigan}, na qual são demonstrados os desafios de construção e implantação de um simples roteador distribuído baseado no protocolo OpenFlow.
+Based on that classification, the Layer-3 SDX's are those that are more approximate from the traditional IXP model, as they can be characterized by the utilization of the BGP protocol between the connectors to exchange IP prefixes. The difference between them resides in the fact that there will be an SDN controller responsible to install the flows in the fabric, and thus, enable the traffic forwarding between the IXP members. 
 
+In this scope, the work of~\cite{stringer2013cardigan} was the first contribution to describe the challenges involving building a simple distributed router based on OpenFlow protocol to manage a real IXP. Later, the work of ~\cite{ams2013victor} brought as the main contribution an implementation, using the OpenFlow protocol, of a methology called ARP sponge, which was being employed at AMS-IX~\footnote{http://www.ams-ix.net} switching fabric at that time to minimize the ARP traffic generated by around 600+ members and peaks of 2Tbps being exchanged daily. 
+
+In the beggining of 2015, TouIX IXP\footnote{http://www.touix.net} in France became publicly the first IXP facility in the Europe to fully leverage OpenFlow for its day-to-day operations. In~\cite{lapeyrade2016openflow}, the authors provide an extensive report on how switches have been selected, configured and installed, as well as the management tools developed to achieve a small set of programmability support on the switching fabric. While the performance and service measurements evaluations showed improvements in the operations, their switching fabric is small when compared to large europeans IXPs such as AMS-IX or DE-CIX. 
+
+In the same sense, the work of~\cite{gupta2016industrial} was the first contribution to bring a discussion about a SDX design capable to achieve the scale required for large IXPs, in what the authors called an Industrial-Scale SDX (iSDX), and later an evaluation of the application of such proposal at AMS-IX was made by~\cite{hermansfeasibility}.
+TO DO: Introduce iSDX design concepts.
 
 \section{Current IXP architectures: Problems and Limitations}
 \label{current_ixp}
-In this section, we categorize and describe the problems and limitations affecting the current IXP architectures based purely on packet forwarding. These issues were fit into three different functional perspectives: Control, Data, and Management planes. 
+In this section, we categorize and describe the problems and limitations affecting the current IXP architectures based purely on packet forwarding. These issues were fit into two different functional perspectives: Control and Data planes. 
 
 This approach is suitable because each perspective represent, in the end, one aspect of the IXP: the peering fabric, the connectors or participants, and finally, the IXP operator. Thus, this approach can provide a clear view about the architectural limitations, and point future directions in terms of platform evolution. 
 
@@ -123,7 +124,10 @@ This approach is suitable because each perspective represent, in the end, one as
 
 \subsubsection{Broadcast Storming in the Switching Fabric}
 \label{subsubsec:broadcast_storm}
-As described in Section~\ref{ixp_intro}, most of the IXPs in operation nowadays utilize a model where the switching fabric is essentially an enormous flat Ethernet domain. Also, a number of big IXPs have migrated their fabrics from VLANs to the Multi-Protocol Label Switching (MPLS) and its Virtual Private Lan Service (VPLS)~\cite{rfc4761}~\cite{rfc4762}, mainly due to the protocol's high scalability and resiliency, when compared to the restrictions imposed in the utilization of VLANs. Nonetheless, regardless the Layer-2 technology chosen, all IXPs members set up BGP sessions to exchange routes on top of this fabric.
+%WHAT
+As described previously in Section~\ref{ixp_intro}....
+
+
 
 The common sense when designing data-center networks is to split large broadcast domains into multiple network segments. However, such solution is not applicable to an IXP fabric, because offering a single shared environment to the members is one of the IXP fundamental premises. 
 

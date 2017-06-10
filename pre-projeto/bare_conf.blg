@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bare_conf.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: pre-projeto.bib
+Database file #2: rfc.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in chungatlanticwave
+Warning--empty year in chungatlanticwave
+Warning--empty journal in hermansfeasibility
+Warning--empty year in hermansfeasibility
+
+Done.
+You've used 20 entries,
+            4039 wiz_defined-function locations,
+            922 strings with 11657 characters,
+and the built_in function-call counts, 12851 in all, are:
+= -- 990
+> -- 403
+< -- 58
++ -- 202
+- -- 85
+* -- 633
+:= -- 2025
+add.period$ -- 43
+call.type$ -- 20
+change.case$ -- 21
+chr.to.int$ -- 132
+cite$ -- 24
+duplicate$ -- 962
+empty$ -- 1063
+format.name$ -- 104
+if$ -- 2886
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 205
+newline$ -- 93
+num.names$ -- 20
+pop$ -- 528
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 957
+stack$ -- 0
+substring$ -- 333
+swap$ -- 717
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 20
+warning$ -- 4
+while$ -- 45
+width$ -- 22
+write$ -- 214
+(There were 4 warnings)
