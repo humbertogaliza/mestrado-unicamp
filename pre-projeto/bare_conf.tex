@@ -40,13 +40,11 @@
 \title{A survey on problems and limitations of current Internet Exchange Points architectures}
 
 \author{
-	\IEEEauthorblockN{Humberto Galiza\IEEEauthorrefmark{1}, Luiz Fernadez Lopez\IEEEauthorrefmark{2}, Leobino Sampaio\IEEEauthorrefmark{3},Jeronimo Bezerra\IEEEauthorrefmark{4}, Julio Ibarra\IEEEauthorrefmark{4}}
+	\IEEEauthorblockN{Humberto Galiza\IEEEauthorrefmark{1},Jeronimo Bezerra\IEEEauthorrefmark{2}}
 	\IEEEauthorblockA{\IEEEauthorrefmark{1}Academic Network at Sao Paulo (ANSP)\\
-							  \IEEEauthorrefmark{1}\{galiza,lopez\}@ansp.br}
-	\IEEEauthorblockA{\IEEEauthorrefmark{3}Universidade Federal da Bahia (UFBA)\\
-							\IEEEauthorrefmark{3}leobino@ufba.br}
-	\IEEEauthorblockA{\IEEEauthorrefmark{4}Florida International University (FIU)\\
-							\IEEEauthorrefmark{4}\{jbezerra,julio\}@fiu.edu}
+							  \IEEEauthorrefmark{1}galiza@ansp.br}
+	\IEEEauthorblockA{\IEEEauthorrefmark{2}Florida International University (FIU)\\
+							\IEEEauthorrefmark{2}jbezerra@fiu.edu}
 }
 
 
@@ -97,55 +95,62 @@ Aside of their importance, from a technical perspective, an IXP is essentially a
 
 However, due to limitations imposed by the technology, including the number of VLANs available for usage (it is a 12-bit only field), big IXPs have migrated their switching fabrics to Multiprotocol Label Switching (MPLS)~\cite{rfc3031} and its Virtual Private Lan Service (VPLS)~\cite{rfc4761,rfc4762}. MPLS and VPLS are not new technologies but had proven to be scalable enough to support IXP operations, especially when they grow in the number of Points of Presence (PoPs) and or participants. When compared to the simple usage of VLANs, the combination between MPLS and VPLS allow the IXP operator to have more control over the switching fabric either on data and control planes, delivering more scalability and resiliency. 
 
-Notwithstanding, regardless the Layer-2 technology employed, all IXP connectors set up BGP sessions to exchange routes on top of this switching fabric.
+Conventionally, on top of the switching fabric resides the Route Servers (RS)~\cite{rfc7947}, an entity responsible for collecting and distributing the routes between the IXP tenants. The role and importance of the RS is discussed in the work of~\cite{richter2014peering}. The employment of RS dramatically simplifies the inter-domain routing because the IXP member has to set up only a single BGP session with the RS to connect with all other members, which is also known as Multi-Lateral Peering Agreement (MLPA), as compared to bi-lateral peering agreements. Additionally, this approach helps to build and spread IXP policies for routing, for instance, prefix BGP prefix black holing and BGP Communities for Traffic Engineering.
 
 \subsection{Next Generation IXPs: Software-Defined Internet Exchange (SDX)}
 SDN promises network management simplification as well as the addition of more capabilities and flexibility. In this sense, an interesting use case for SDN is its application to IXPs, turning them into the so-called Software-Defined Internet Exchange points (SDX). 
 
-While there is a lack of consensus on SDX definition in the literature, recent research and developments shows that this topic still has a good relevance to the academia. In the work of~\cite{chungatlanticwave} is suggested a classification of SDX based on the functionality delivered to the fabric: (1) Layer-3 SDX; (2) Layer-2 SDX; and (3) SDX for SDN-Island interconnections.
+While there is a lack of consensus on SDX definition in the literature, recent research and developments shows that this topic still has a good relevance to the academia, either to National Research and Education usage~\cite{chung2015atlanticwave}~\cite{ricci2016report}~\cite{ventre2016geant}~\cite{birkner2017sdx}, as well as a migration path to the commercial IXP on the Internet~\cite{chiesa2016inter}
 
-Based on that classification, the Layer-3 SDX's are those that are more approximate from the traditional IXP model, as they can be characterized by the utilization of the BGP protocol between the connectors to exchange IP prefixes. The difference between them resides in the fact that there will be an SDN controller responsible to install the flows in the fabric, and thus, enable the traffic forwarding between the IXP members. 
+Chung et. al~\cite{chung2016sdx} offered an architecture-focused survey on the most relevant SDX studies despite its uses in various disciplines. In this regard, the authors defined a taxonomy for SDXs based on the infrastructure and the nature of resources available to be exchanged: (1) Layer-3 SDX; (2) Layer-2 SDX; and (3) SDX for SDN-Island interconnections.
 
-In this scope, the work of~\cite{stringer2013cardigan} was the first contribution to describe the challenges involving building a simple distributed router based on OpenFlow protocol to manage a real IXP. Later, the work of ~\cite{ams2013victor} brought as the main contribution an implementation, using the OpenFlow protocol, of a methology called ARP sponge, which was being employed at AMS-IX~\footnote{http://www.ams-ix.net} switching fabric at that time to minimize the ARP traffic generated by around 600+ members and peaks of 2Tbps being exchanged daily. 
+Based on that classification, a Layer-3 SDX can be seen as the next generation architecture for the current traffic exchange model on the Internet. The minimal solution still relies on the utilization of the BGP protocol on the edge (between the connectors and IXP route servers to exchange IP prefixes), but the additional requirement is the presence of an SDN controller responsible to install the flows in the SDN-enabled switching fabric. Additionally, a policy manager may be added in order to enrich the set of capabilities available to the connectors, such as fine grained Traffic Engineering support, application specific peering, and security services.
 
-In the beggining of 2015, TouIX IXP\footnote{http://www.touix.net} in France became publicly the first IXP facility in the Europe to fully leverage OpenFlow for its day-to-day operations. In~\cite{lapeyrade2016openflow}, the authors provide an extensive report on how switches have been selected, configured and installed, as well as the management tools developed to achieve a small set of programmability support on the switching fabric. While the performance and service measurements evaluations showed improvements in the operations, their switching fabric is small when compared to large europeans IXPs such as AMS-IX or DE-CIX. 
+In this scope, the work of~\cite{stringer2013cardigan} was the first contribution to describe the challenges involving building a simple distributed router based on OpenFlow protocol~\cite{nascimento2011virtual} to manage a real IXP. Later, the work of ~\cite{ams2013victor} innovated by bringing as the main contribution an implementation using the OpenFlow protocol of a methology called ARP sponge in a real world IXP, the AMS-IX~\footnote{http://www.ams-ix.net} in the Netherlands. Such methodology was developed using traditional tools and has been employed at AMS-IX switching fabric to minimize the ARP traffic generated by around 600+ members and peaks of 2Tbps being exchanged daily. 
 
-In the same sense, the work of~\cite{gupta2016industrial} was the first contribution to bring a discussion about a SDX design capable to achieve the scale required for large IXPs, in what the authors called an Industrial-Scale SDX (iSDX), and later an evaluation of the application of such proposal at AMS-IX was made by~\cite{hermansfeasibility}.
-TO DO: Introduce iSDX design concepts.
+In the beggining of 2015, the Toulouse Internet eXchange Point~\footnote{http://www.touix.net} in France became publicly the first IXP facility in the Europe to fully leverage OpenFlow for its day-to-day operations. The authors in~\cite{lapeyrade2016openflow} provide an extensive bottom-up report on how the SDN/OpenFlow infrastructure was built and deployed, as well as details about the management tools developed to achieve a small set of programmability support on the switching fabric. While their study discuss a practical deployment experience, the switching fabric described is very small, and as a consequence, the solution leverages only a small subset of OpenFlow capabilities to solve specific problems, such as Broadcast storms, but looking more from a management perspective.
+ 
+In the same sense, Gupta el. al,~\cite{gupta2016industrial} brought the first discussion about a SDX design capable to achieve the scale required for large IXPs, in what the authors called an Industrial-Scale SDX (iSDX). The proposal introduces a new flow rule compression algorithm, which could potentially reduce the amount of flow rules necessary to express the high-level policies, such as application specific peerings in a large IXP, without exceeding the capabilities of the current hardware. Later, an evaluation of the application of such proposal at AMS-IX was made by~\cite{hermansfeasibility}.
 
 \section{Current IXP architectures: Problems and Limitations}
 \label{current_ixp}
 In this section, we categorize and describe the problems and limitations affecting the current IXP architectures based purely on packet forwarding. These issues were fit into two different functional perspectives: Control and Data planes. 
 
-This approach is suitable because each perspective represent, in the end, one aspect of the IXP: the peering fabric, the connectors or participants, and finally, the IXP operator. Thus, this approach can provide a clear view about the architectural limitations, and point future directions in terms of platform evolution. 
+This approach is suitable because each perspective represent, in the end, one aspect of the IXP: the conjunction between the peering fabric and the IXP operator, and the connectors and packet flow. Thus, this approach can provide a clear view about the architectural limitations, and point future directions in terms of platform evolution. 
 
 \subsection{Control Plane issues and limitations}
 \label{subsec:issues_cp}
+As described previously in Section~\ref{ixp_intro}, an IXP is essentially an unique Ethernet domain based on technologies such as VLAN or VPLS on top of which a set of participants exchange traffic.
+
+TO DO: Describe Control Plane more detailed. 
 
 \subsubsection{Broadcast Storming in the Switching Fabric}
 \label{subsubsec:broadcast_storm}
-%WHAT
-As described previously in Section~\ref{ixp_intro}....
-
-
-
-The common sense when designing data-center networks is to split large broadcast domains into multiple network segments. However, such solution is not applicable to an IXP fabric, because offering a single shared environment to the members is one of the IXP fundamental premises. 
+It is a common sense when designing data center networks to split up large broadcast domains into multiple network segments. However, such solution is not applicable to an IXP fabric, because offering a single shared environment to the members is one of the fundamental premises to the IXP. 
 
 Flat Layer-2 networks have long been known to have scaling problems. As the size of a broadcast domain increases, the level of broadcast traffic from protocols like Address Resolution Protocol (ARP) in the fabric increases. Significant amounts of broadcast traffic pose a particular burden on the network because every device in such domain must process and possibly act on such traffic. In extreme cases, these storms can occur where the quantity of broadcast traffic reaches a level that actually brings down part or all of a network~\cite{rfc6820}. 
 
 Although this interaction does not represent a huge amount of bandwidth, the efficiency of the network can be improved by reducing the allocated power for broadcast traffic~\cite{ams2013victor}. Sources of broadcast storms in the switching fabric include, but does not limit to: (1) poor implementations of loop detection and prevention protocols; (2) IXP members misconfiguration or equipment errors; (3) large number of IXP participants. 
 
-Some IXP operators around the world have developed processes to validate the presence of not authorized traffic in the switching fabric, including .... (To Do - Survey com IXP operators?)
-To address (1)...
-To address (2)...
-To address (3)...
-
 Besides that, the IXP operator should be able to distinguish ARP between legitimate ARP requests and genuine broadcast storms, because both a restrict ARP blocking policy or excessive high ARP timeouts may result in the fabric aging out the MAC address of the receiving party from its MAC and CAM tables.
+
+In this paper we already mentioned some works published as a response to this challenge.  Particularly with OpenFlow, the remediation to this problem can be achieved very easily.
+---> PAREI AQUI
 
 \subsubsection{Prohibited and Unknown Ethernet Frames in the Switching Fabric}
 Usually under normal operations the only Layer-2 traffic allowed in most current IXPs are: (1) ARP (ethertype: 0x0806), (2) IPv4 (ethertype: 0x0800) and (3) IPv6 (ethertype: 0x86dd). Despite this, it is not unusual to see in the switching fabric frames from protocols varying since Bridge Protocol Data Units (BPDU) and its variants, topology discovery protocols such as IEEE Std 802.1AB - Link Layer Discovery Protocol (LLDP) and the proprietary Cisco Discovery Protocol (CDP). 
 
 The occurrence of such ethertypes in the Exchange platform as well as frames generated by upper layers protocols such as DHCP and IPv6 Neighbour Discovery / Router Advertisements, is strictly linked with device member misconfiguration. As long as the number of IXP members and the IXP Points of Presence (PoP) grows, more hard is to track down and address these problems. 
+
+Still, while there are reports from some IXP operators around the world about a methodology, automated or not, to validate the presence of not authorized traffic in the switching fabric, it is unclear whether there is validation of
+
+%To Do - Survey com IXP operators?
+
+have developed processes to validate, including .... ()
+To address (1)...
+To address (2)...
+To address (3)...
+
 
 Each of these already mentioned ethertypes could potentially impact the normal IXP operation leading to a total or partial interruption of the service. Even though there are simple mechanisms to easily address each of these issues, the process require some networking monitoring tools as well as network operator attention to network logs and flows. Based on that information gathered, the operator can trigger an action to address the issue. 
 

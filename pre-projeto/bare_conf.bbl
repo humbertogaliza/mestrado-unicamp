@@ -98,16 +98,64 @@ M.~Lasserre and V.~Kompella, ``{Virtual Private LAN Service (VPLS) Using Label
   \url{http://www.ietf.org/rfc/rfc4762.txt}
 \BIBentrySTDinterwordspacing
 
-\bibitem{chungatlanticwave}
+\bibitem{rfc7947}
+\BIBentryALTinterwordspacing
+E.~Jasinska, N.~Hilliard, R.~Raszuk, and N.~Bakker, ``{Internet Exchange BGP
+  Route Server},'' RFC 7947 (Proposed Standard), Internet Engineering Task
+  Force, Sep. 2016. [Online]. Available:
+  \url{http://www.ietf.org/rfc/rfc7947.txt}
+\BIBentrySTDinterwordspacing
+
+\bibitem{richter2014peering}
+P.~Richter, G.~Smaragdakis, A.~Feldmann, N.~Chatzis, J.~Boettger, and
+  W.~Willinger, ``Peering at peerings: On the role of ixp route servers,'' in
+  \emph{Proceedings of the 2014 Conference on Internet Measurement
+  Conference}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2014, pp. 31--44.
+
+\bibitem{chung2015atlanticwave}
 J.~Chung, J.~Cox, J.~Ibarra, J.~Bezerra, H.~Morgan, R.~Clark, and H.~Owen,
   ``Atlanticwave-sdx: An international sdx to support science data
-  applications.''
+  applications,'' 2015.
+
+\bibitem{ricci2016report}
+R.~Ricci and N.~Feamster, ``Report of the nsf workshop on software defined
+  infrastructures and software defined exchanges,'' \emph{Washington, DC, Feb},
+  2016.
+
+\bibitem{ventre2016geant}
+P.~L. Ventre, B.~Jakovljevic, D.~Schmitz, A.~Papazois, S.~Salsano, M.~Santuari,
+  M.~Gerola, A.~Mendiola, M.~Usman, and A.~Sevasti, ``Geant sdx-sdn based open
+  exchange point,'' in \emph{NetSoft Conference and Workshops (NetSoft), 2016
+  IEEE}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, pp. 345--346.
+
+\bibitem{birkner2017sdx}
+R.~Birkner, A.~Gupta, N.~Feamster, and L.~Vanbever, ``Sdx-based flexibility or
+  internet correctness?: Pick two!'' in \emph{Proceedings of the Symposium on
+  SDN Research}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2017, pp. 1--7.
+
+\bibitem{chiesa2016inter}
+M.~Chiesa, C.~Dietzel, G.~Antichi, M.~Bruyere, I.~Castro, M.~Gusat, T.~King,
+  A.~W. Moore, T.~D. Nguyen, P.~Owezarski \emph{et~al.}, ``Inter-domain
+  networking innovation on steroids: empowering ixps with sdn capabilities,''
+  \emph{IEEE Communications Magazine}, vol.~54, no.~10, pp. 102--108, 2016.
+
+\bibitem{chung2016sdx}
+J.~Chung, H.~Owen, and R.~Clark, ``Sdx architectures: A qualitative analysis,''
+  in \emph{SoutheastCon, 2016}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2016, pp. 1--8.
 
 \bibitem{stringer2013cardigan}
 J.~P. Stringer, Q.~Fu, C.~Lorier, R.~Nelson, and C.~E. Rothenberg, ``Cardigan:
   Deploying a distributed routing fabric,'' in \emph{Proceedings of the second
   ACM SIGCOMM workshop on Hot topics in software defined networking}.\hskip 1em
   plus 0.5em minus 0.4em\relax ACM, 2013, pp. 169--170.
+
+\bibitem{nascimento2011virtual}
+M.~R. Nascimento, C.~E. Rothenberg, M.~R. Salvador, C.~N. Corr{\^e}a, S.~C.
+  de~Lucena, and M.~F. Magalh{\~a}es, ``Virtual routers as a service: the
+  routeflow approach leveraging software-defined networks,'' in
+  \emph{Proceedings of the 6th International Conference on Future Internet
+  Technologies}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2011, pp. 34--37.
 
 \bibitem{ams2013victor}
 V.~Boteanu and H.~Bagheri, ``Minimizing arp traffic in the ams-ix switching
